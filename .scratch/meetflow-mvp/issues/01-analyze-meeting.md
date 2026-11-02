@@ -1,6 +1,6 @@
 # 01 — Analyze a meeting
 
-Status: in_progress
+Status: done
 Triage: ready-for-agent
 Blocked by: None
 
@@ -14,4 +14,4 @@ Valid paste/upload; all analysis sections/nulls; guarded server integration; acc
 TDD at schema/input/HTTP seams; Standards and Spec review; local lint/typecheck/tests/build.
 
 ## Results / limitations
-Implementation in progress. No Gemini key provided; external fetch mocked in tests.
+Completed. npm install succeeded; 43 tests passed; lint and typecheck passed; production build passed. Initial sandbox build failed to spawn its CSS worker; rerun outside sandbox succeeded. Four review findings corrected and both reviewers confirmed zero remaining. Browser smoke covered example input, disabled configuration error, sample counts/nulls, dark/light and 390px mobile. Gemini live request remains unverified because no API key was supplied. No request was sent to Google. See ../reviews/01.md. Production dependencies audit: zero vulnerabilities; development-only minimatch advisory tracked for final documentation.

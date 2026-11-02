@@ -42,3 +42,7 @@ O usuário já determinou tracker, caminhos, arquivo `AGENTS.md` e execução da
 ## Validação e limites
 
 Não existe aplicação ou comando de lint, build ou testes neste repositório inicial; essas validações não foram executadas nem declaradas aprovadas. Não foi criado spec, ticket ou código da funcionalidade durante a preparação. O fluxo está aguardando as decisões de produto na entrevista antes de decisões técnicas.
+
+## Atualização após o briefing
+
+A proposta helpdesk/Jurídico foi substituída por MeetFlow AI, conforme briefing e autorização posterior de execução autônoma com Gemini gratuito. Branch atual: `codex/meetflow-mvp`. A exceção às confirmações desta fase está em `workflow.md` e `.scratch/meetflow-mvp/spec.md`. O registro inicial acima descreve a preparação antes dessa mudança.
