@@ -23,3 +23,13 @@ Trabalhe em branch local por fase, nunca diretamente em `main` ou `master`. Pres
 Não faça push, PRs, issues externas, publicação, CI remota ou alterações de remotes. A fonte das skills é somente para leitura; consultar e baixar skills oficiais é permitido. Não altere outros projetos ou configurações globais, salvo instalação estritamente necessária de skills.
 
 Merge, deploy, migrations e ativação em produção exigem decisão explícita do usuário. Aprovação não autoriza push implicitamente. Nunca grave segredos em arquivos ou commits.
+
+<!-- BEGIN:nextjs-agent-rules -->
+
+## This is NOT the Next.js you know
+
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+
+This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+
+<!-- END:nextjs-agent-rules -->

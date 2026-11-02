@@ -208,3 +208,32 @@ it("sets no-store on safe errors", async () => {
     (await POST(request({ transcript: "" }))).headers.get("Cache-Control"),
   ).toBe("no-store");
 });
+
+it("supports explicit local activation and reversal without an extra provider call", async () => {
+  const boundary = vi
+    .fn()
+    .mockImplementation(
+      async () =>
+        new Response(
+          JSON.stringify(candidate(JSON.stringify(EXAMPLE_ANALYSIS))),
+          { status: 200 },
+        ),
+    );
+  vi.stubGlobal("fetch", boundary);
+  vi.stubEnv("MEETING_ANALYSIS_ENABLED", "false");
+  expect((await POST(request())).status).toBe(503);
+  vi.stubEnv("MEETING_ANALYSIS_ENABLED", "true");
+  expect((await POST(request())).status).toBe(200);
+  vi.stubEnv("MEETING_ANALYSIS_ENABLED", "false");
+  expect((await POST(request())).status).toBe(503);
+  expect(boundary).toHaveBeenCalledTimes(1);
+});
+it("rejects an invalid timeout configuration before calling the provider", async () => {
+  vi.stubEnv("GEMINI_TIMEOUT_MS", "0");
+  const boundary = vi.fn();
+  vi.stubGlobal("fetch", boundary);
+  const response = await POST(request());
+  expect(response.status).toBe(503);
+  expect((await response.json()).error.code).toBe("INVALID_CONFIGURATION");
+  expect(boundary).not.toHaveBeenCalled();
+});

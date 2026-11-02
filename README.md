@@ -145,6 +145,8 @@ npm run build
 
 Tests cover schema validation, unknown/null fields, transcript normalization, file constraints, Markdown output, and the HTTP route with the external fetch boundary mocked. Route coverage includes malformed JSON, limits, disabled/missing configuration, cross-origin requests, unavailable models, quota, timeouts, blocked/truncated/invalid output and safe errors. Tests do not call Google or require an API key.
 
+Run npm run check to execute lint, typecheck, tests and build in sequence, stopping at the first failure.
+
 Use npm run test:watch during development and npm run format to format source/configuration. Validation evidence and review reports are versioned under .scratch/meetflow-mvp/.
 
 **Live Gemini verification is pending:** no API key was supplied during implementation. The interface and server integration are tested locally with mocked provider responses; the sample preview is a fixture, not an AI-quality benchmark.
@@ -162,8 +164,8 @@ src/
     analysis-error.ts        # Safe application errors
     read-limited-text.ts     # Bounded stream reader
 .scratch/meetflow-mvp/        # Spec, tickets, reviews and retrospective
- docs/agents/                # Persistent local workflow configuration
- docs/screenshots/           # Real local captures
+docs/agents/                # Persistent local workflow configuration
+docs/screenshots/           # Real local captures
 ```
 
 ## API
