@@ -9,6 +9,7 @@ import {
 import { Icon } from "@/components/icon";
 import { EXAMPLE_ANALYSIS, EXAMPLE_TRANSCRIPT } from "./example";
 import { AnalysisResults } from "./results";
+import { ExportToolbar } from "./export-toolbar";
 import { meetingAnalysisSchema, type MeetingAnalysis } from "./schema";
 import {
   MAX_TRANSCRIPT_CHARS,
@@ -421,6 +422,11 @@ export function Workspace({ available }: { available: boolean }) {
               aria-label="Meeting analysis results"
             >
               <AnalysisResults analysis={analysis} sample={sample} />
+              <ExportToolbar
+                key={JSON.stringify(analysis)}
+                analysis={analysis}
+                sample={sample}
+              />
             </section>
           )}
           <footer className="footer">

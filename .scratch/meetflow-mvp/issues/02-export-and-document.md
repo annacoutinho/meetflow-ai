@@ -1,6 +1,6 @@
 # 02 — Export and document
 
-Status: blocked
+Status: done
 Triage: ready-for-agent
 Blocked by: 01-analyze-meeting.md
 
@@ -14,4 +14,4 @@ Valid exports preserve nulls, Markdown escapes unsafe text; README documents rea
 TDD Markdown; local smoke, lint/typecheck/tests/build; Standards and Spec review.
 
 ## Results / limitations
-Waiting for 01.
+Completed. 46 tests passed; lint/typecheck/build passed. Standards 0 findings; Spec 0 findings. Clipboard success states and actual Markdown/JSON downloads verified in browser; JSON nulls and Markdown sample notice/content checked from downloaded files. Three real screenshots visually inspected. README and MIT included. PDF remains roadmap. See ../reviews/02.md. Gemini real verification still requires a free-tier key.
