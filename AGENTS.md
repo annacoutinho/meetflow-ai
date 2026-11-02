@@ -2,7 +2,7 @@
 
 ## Agent skills
 
-Para este projeto e as próximas tarefas, siga [o workflow por fases e tickets](docs/agents/workflow.md). Leia esse arquivo antes de planejar ou implementar. As decisões do usuário prevalecem sobre os padrões das skills. A fase atual é `meetflow-mvp`; suas autorizações específicas estão em `.scratch/meetflow-mvp/spec.md`.
+Para este projeto e as próximas tarefas, siga [o workflow por fases e tickets](docs/agents/workflow.md). Leia esse arquivo antes de planejar ou implementar. As decisões do usuário prevalecem sobre os padrões das skills. A fase atual é `meeting-assistant`; leia `.scratch/meeting-assistant/spec.md`. O usuário determinou continuar na branch `codex/meetflow-mvp`, com autonomia técnica dentro do briefing.
 
 ### Issue tracker
 

@@ -1,5 +1,7 @@
 # MeetFlow AI
 
+> **Work in progress:** this branch preserves the unfinished Human Review evolution. Use the `main` branch for the completed MVP. The review UI and Trello/Azure adapters are not implemented here yet. See [WIP.md](WIP.md).
+
 **Turn meetings into action with AI.**
 
 A focused meeting workspace built with Next.js, TypeScript and Gemini. Paste a transcript, extract the important parts, and leave with a clear plan. A portfolio project at the intersection of AI Engineering and Software Engineering.
